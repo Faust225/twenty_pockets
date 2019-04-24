@@ -28,21 +28,6 @@ for($i = 1; $i < 50; $i++) {
     <head>
         <title>Smoke costs</title> 
         <meta charset="UTF-8">
-        <style>
-            .cig {
-                width: 20px;
-                height: 20px;
-                background-image: url(https://www.varle.lt/blog/wp-content/uploads/2015/03/e-cigarete_kenkia.png);
-                background-size: cover;
-                display: inline-block;
-            }
-
-            .pakuote {
-                border: 2px solid black;
-                margin: 10px;
-            }
-           
-        </style>
     </head> 
     <body>
         <?php print $conclusion; ?>
