@@ -7,6 +7,7 @@ $my_money = 15000;
 
 
 $conclusion = '';
+$money_left = 0;
 
 for($i = 1; $i < 50; $i++) {
     
@@ -17,6 +18,7 @@ for($i = 1; $i < 50; $i++) {
         
     } else {
         $conclusion .= ' enought money car cost ' . $car_price . '<br>';
+        $money_left = $my_money - $car_price;
         break;
     }
 }
@@ -30,6 +32,6 @@ for($i = 1; $i < 50; $i++) {
         <meta charset="UTF-8">
     </head> 
     <body>
-        <?php print $conclusion; ?>
+        <?php print $conclusion . " money left after I bought car $money_left"; ?>
     </body> 
 </html><!-- alt + shift + f   oskarShop.lt--> 
