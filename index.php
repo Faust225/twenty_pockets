@@ -42,18 +42,20 @@ for ($day = 1; $day <= 365; $day++){
    }
 }
 
-for($cig = 1; $cig < $surukyta; $cig++) {
+$pakuote = '';
+
+for($cig = 1; $cig <= $surukyta; $cig++) {
     
-       if($cig % 20 == 1) {
-       $borderis = 'bord_start';
-       
+    if($cig % 20 == 1) {
+      $pakuote .= "<div class=\"pakuote\"> <div class=\"cig\"></div> ";
+      
    } elseif($cig % 20 == 0){
-       $borderis = 'bord-end';
-   } else {
-       $borderis = 'bord_else';
-   }
+      $pakuote .= "<div class=\"cig\"></div></div>";
+      
+  } else {
+      $pakuote .= "<div class=\"cig\"></div>";
+  }
    
-    $smoke_images .= "<div class=\"cig $borderis\"></div>";
     
 }
 
@@ -72,38 +74,15 @@ for($cig = 1; $cig < $surukyta; $cig++) {
                 background-size: cover;
                 display: inline-block;
             }
-            
-            .bord_start {
-                border-top: 2px solid black;
-                border-bottom: 2px solid black;
-                border-left: 2px solid black;
-                 margin-top: 10px;
-                margin-bottom: 10px;
-                
-            }
-            
-            .bord_else {
-                border-top: 2px solid black;
-                border-bottom: 2px solid black;
-                margin: 10px 0;
-            }
-            
-            .bord-end {
-                border-top: 2px solid black;
-                border-bottom: 2px solid black;
-                border-right: 2px solid black;
-                
-                margin-right: 10px;
-                margin-top: 10px;
-                margin-bottom: 10px;
+
+            .pakuote {
+                border: 2px solid black;
+                margin: 10px;
             }
            
         </style>
     </head> 
     <body>
-
-        <div>
-        <?php print $smoke_images; ?>
-        </div>
+        <?php print $pakuote; ?>
     </body> 
 </html><!-- alt + shift + f   oskarShop.lt--> 
