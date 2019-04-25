@@ -1,26 +1,29 @@
-<?php 
+<?php
 
-$kiausinai = ['du dideli kiausiniai'];
-$baklazanai = ['vienas mazas baklazanas'];
-$grietine = ['Vienas didelis grietines indelis'];
-
-$saldytuvas = [
-    'kiausinai_sek' => $kiausinai,
-    'baklazanu_sek' => $baklazanai,
-    'grietines_sek' => $grietine
+$zmones = [
+    'petras_pizdis' => [
+        'item' => 'telefonas',
+        'item_action' => 'prapistas',
+    ],
+    'tomo_albomo' => [
+        'item' => 'buljonas',
+        'item_action' => 'naudojamas',
+    ],
+    'anos_shitkovos' => [
+        'item' => 'rulonas',
+        'item_action' => 'pasibaiges',
+    ]
 ];
 
-var_dump($arr);
-?> 
+var_dump($zmones);
 
-<!DOCTYPE html>  
-<html>  
+?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Array</title>
+    </head>
+    <body>
 
-    <head> 
-        <title>Smoke costs</title>  
-        <meta charset="UTF-8"> 
-    </head>  
-    <body> 
-    </body>  
-
-</html><!-- alt + shift + f   oskarShop.lt-->
+    </body>
+</html>
