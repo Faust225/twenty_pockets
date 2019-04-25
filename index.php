@@ -2,7 +2,7 @@
 
 $saldyvuvas = [
     
-    $pirma_sekcija = [
+    'pirma_sekcija' => [
         
         'kiausiniai' => [
             'produkto_pav' => 'kiausiniai',
@@ -24,7 +24,7 @@ $saldyvuvas = [
             'kiekis' => 0,
         ]
     ],
-    $antra_sekcija = [
+    'antra_sekcija' => [
         
         'pienas' => [
             'produkto_pav' => 'pienas',
