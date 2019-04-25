@@ -1,6 +1,15 @@
 <?php 
 
-$arr = ['du dideli kiausiniai', 'vienas mazas baklazanas', 'vienas didelis grietines indelis'];
+$kiausinai = ['du dideli kiausiniai'];
+$baklazanai = ['vienas mazas baklazanas'];
+$grietine = ['Vienas didelis grietines indelis'];
+
+$saldytuvas = [
+    'kiausinai_sek' => $kiausinai,
+    'baklazanu_sek' => $baklazanai,
+    'grietines_sek' => $grietine
+];
+
 var_dump($arr);
 ?> 
 
