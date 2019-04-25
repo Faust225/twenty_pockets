@@ -1,17 +1,23 @@
 <?php
 
 $zmones = [
-    'petras_pizdis' => [
+    'petras' => [
         'item' => 'telefonas',
         'item_action' => 'prapistas',
+        'name' => 'Petras',
+        'surname' => 'Pizdis',
     ],
-    'tomo_albomo' => [
+    'tomas' => [
         'item' => 'buljonas',
         'item_action' => 'naudojamas',
+        'name' => 'Tomas',
+        'surname' => 'Ablomas',
     ],
-    'anos_shitkovos' => [
+    'ana' => [
         'item' => 'rulonas',
         'item_action' => 'pasibaiges',
+        'name' => 'Ana',
+        'surname' => 'Shitkova',
     ]
 ];
 
