@@ -1,64 +1,36 @@
 <?php
-
-$bar_adventure = '';
-
-$random_result = '';
-
 $result = '';
+$memory_saved = 'Next memories saved: ';
 
-$day_adventures = [
-    
-  'pirmadienis' => [
-      
-    'week_day' => 'Pirmadienis',
-     
-     'CA' => [
- 
-         'CA' => 'Paskaita'        
-     ]
-  ],
-   
-   'penktadienis' => [
-        
-     'week_day' => 'Penktadienis',
-       
-      'baras' => [
-          
-          'Paskaita',
-          'viskis',
-          'alus',
-          'degtine'
-          ]
-    ]
-    
+error_reporting(0);
+
+$my_memories = [
+    'Paskaita',
+    'viskis',
+    'alus',
+    'degtine'
 ];
-var_dump($day_adventures);
+
+$friend_memories = [
+    'viskis',
+    'alus',
+    'degtine'
+];
 
 
-foreach($day_adventures as $day => $week_day) {
+var_dump($my_memories);
+var_dump($friend_memories);
+
+
+foreach ($my_memories as $memory) {
     
-    if($day == 'penktadienis') {
-        
-    foreach($week_day as $key => $place_and_act) {
-        
-        $result .= "<li> $place_and_act </li>";
-        
-           //baras                   keys => values
-           foreach($place_and_act as $drinks => $bar) {
-                   
-              
-              // bar size
-              $drink_lenght = count($place_and_act);
-            
-              // bar min and max
-              $random_drink = rand(0, $drink_lenght - 1);
-              
-               $random_friend_drink = rand(0, $drink_lenght - 1);
-             }
-        }
+    if(in_array($memory, $friend_memories)) {
+        $memory_saved .= "$memory ";
+    } else {
+        $memory_saved .= '';
     }
 }
-
+    
 ?>
 <html>
     <head>
@@ -67,10 +39,7 @@ foreach($day_adventures as $day => $week_day) {
     </head>
     <body>
         <ul>
-        <?php print_r($result); ?>
+            <?php print $memory_saved; ?>
         </ul>
-           
-        <h1><?php print 'My memories ' . $day_adventures['penktadienis']['baras'][$random_drink];?></h1>  
-        <?php print 'Friend memories ' . $day_adventures['penktadienis']['baras'][$random_friend_drink];?>
     </body>
 </html>
