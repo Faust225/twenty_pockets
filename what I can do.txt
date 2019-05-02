@@ -1,0 +1,5 @@
+Look to cigarretes Aurimas method
+
+in task with randomly generate size of bag and add items until there is space
+
+in task with bags generate chance of finding element with size + sum_of_sizes + is_dark

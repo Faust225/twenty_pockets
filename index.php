@@ -1,45 +1,36 @@
 <?php
-$result = '';
-$memory_saved = 'Next memories saved: ';
 
-error_reporting(0);
+/**
+ * 
+ * @param type $arr_size
+ */
+function slot_run($arr_size = 5) {
 
-$my_memories = [
-    'Paskaita',
-    'viskis',
-    'alus',
-    'degtine'
-];
+    $empty_arr = [];
 
-$friend_memories = [
-    'viskis',
-    'alus',
-    'degtine'
-];
-
-
-var_dump($my_memories);
-var_dump($friend_memories);
-
-
-foreach ($my_memories as $memory) {
+for($i = 0; $i < $arr_size; $i++) {
     
-    if(in_array($memory, $friend_memories)) {
-        $memory_saved .= "$memory ";
-    } else {
-        $memory_saved .= '';
+    for($j = 0; $j < $arr_size; $j++) {
+        
+        $empty_arr[$i][$j] = rand(0, 1);
     }
-}
     
-?>
+}
+  var_dump($empty_arr);
+}
+?> 
+
+<!DOCTYPE html> 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Array</title>
-    </head>
-    <body>
-        <ul>
-            <?php print $memory_saved; ?>
-        </ul>
-    </body>
+    <head> 
+        <title>Universal 2 dimension array</title> 
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+        <style> 
+        </style> 
+    </head> 
+    <body> 
+        <?php slot_run(); ?> 
+    </body> 
+
 </html>
